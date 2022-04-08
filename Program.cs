@@ -19,27 +19,29 @@ namespace Data_Structures___ArrayList
             int max = 0;
             Random rnd = new Random();
             //instantiate array list and list
-            ArrayList grades = new ArrayList();
-            List<int> grades2 = new List<int>();
+            
+            //ArrayList grades = new ArrayList();
+            List<int> gradesList = new List<int>();
             for (int i= 0; i < 10; i++)
             {
                 //randNum for grade, add to array list
                 grade = (int)rnd.Next(1, 100);
-                grades.Add(grade);
-                grades2.Add(grade);
+                //grades.Add(grade);
+                gradesList.Add(grade);
             }  
-            for (int i=0; i< grades.Count; i++)
+            for (int i=0; i< gradesList.Count; i++)
             {
-                Console.WriteLine($"Grade {i} is {grades[i]} - ArrayList");
+                Console.WriteLine($"Grade {i} is {gradesList[i]}");
                 //Console.WriteLine($"Grade {i} is {grades2[i]} - List");
                 //total += (int)grades[i];
-                total += (int) grades[i];
-                if (grades2[i] > max)
+                total += gradesList[i];
+                if (gradesList[i] > max)
                 {
-                    max = grades2[i];
+                    //max = (int)grades[i];
+                    max = gradesList[i];
                 }
             }
-            average = (double)total / (double)grades.Count;
+            average = (double) total / (double) gradesList.Count;
             Console.WriteLine($"Average is: {average}");
             Console.WriteLine($"Highest grade is {max}");
             Console.ReadLine();
